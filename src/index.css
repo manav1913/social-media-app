@@ -1,0 +1,15 @@
+:root {
+  --primary: #f97316;     /* orange */
+  --primary-dark: #ea580c;
+  --bg: #fdf6ec;          /* beige background */
+  --surface: #fff7ed;     /* light beige cards */
+  --text: #2d2d2d;
+  --text-light: #6b7280;
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
