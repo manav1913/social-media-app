@@ -10,6 +10,7 @@ import { useAuth } from '../context/AuthContext'
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
     const { signInWithGitHub, signOut, user } = useAuth()
+    const displayName = user?.user_metadata.user_name || user?.email
     return (
         <div>
             <nav className='navbar'>
@@ -32,10 +33,25 @@ const Navbar = () => {
                 </div>
 
                 {/*Desktop Auth  */}
-                <button className="github-btn" onClick={signInWithGitHub}>
-                    <FontAwesomeIcon icon={faSquareGithub} />
-                    <span>Sign in with GitHub</span>
-                </button>
+                <div className="auth-section">
+                    {user ? (
+                        <div className="user-info">
+                            {user.user_metadata.avatar_url &&(
+                                <img  className="avatar"  src={user.user_metadata.avatar_url} alt="" />
+                            )}
+                            <span className="username">{displayName}</span>
+                            <button className="logout-btn" onClick={signOut}>
+                                Sign Out
+                            </button>
+                        </div>
+                    ) : (
+                        <button className="github-btn" onClick={signInWithGitHub}>
+                            <FontAwesomeIcon icon={faSquareGithub} size="lg" />
+                            <span>Sign in with GitHub</span>
+                        </button>
+                    )}
+                </div>
+
 
                 {/* Mobile Menu */}
 

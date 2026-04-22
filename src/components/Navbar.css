@@ -65,17 +65,64 @@
   color: var(--primary);
 }
 
-.github-btn {
+/* Wrapper */
+.auth-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Logged-in container */
+.user-info {
   display: flex;
   align-items: center;
   gap: 10px;
+}
 
-  background: var(--primary);      /* orange */
+/* Avatar */
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+}
+
+/* Username */
+.username {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* Logout button */
+.logout-btn {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* GitHub login button */
+.github-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: var(--primary);
   color: white;
   border: none;
   border-radius: 10px;
 
-  padding: 10px 16px;
+  padding: 8px 14px;
   font-size: 14px;
   font-weight: 500;
 
@@ -83,21 +130,19 @@
   transition: all 0.2s ease;
 }
 
-/* Icon size */
 .github-btn svg {
-  font-size: 22px;
+  font-size: 18px;
 }
 
-/* Hover effect */
 .github-btn:hover {
   background: var(--primary-dark);
   transform: translateY(-1px);
 }
 
-/* Click effect */
 .github-btn:active {
   transform: scale(0.98);
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
