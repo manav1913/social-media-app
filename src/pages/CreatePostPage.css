@@ -1,19 +1,15 @@
 .create-post-page {
   min-height: calc(100vh - 80px);
   padding: 60px 20px;
-
-
   background:
-    radial-gradient(circle at top, rgba(77, 163, 255, 0.08), transparent 35%),
-    linear-gradient(180deg, #081220 0%, #07111f 100%);
+    radial-gradient(circle at top, rgba(255, 122, 89, 0.1), transparent 35%),
+    linear-gradient(180deg, #311119 0%, #220b11 100%);
 }
-
 
 .create-post-page-container {
   max-width: 760px;
   margin: 0 auto;
 }
-
 
 .create-post-page-title {
   font-size: clamp(28px, 4vw, 42px);
@@ -23,7 +19,6 @@
   margin-bottom: 10px;
 }
 
-
 .create-post-page-subtitle {
   font-size: 15px;
   color: var(--text-light);
@@ -32,13 +27,11 @@
   max-width: 520px;
 }
 
-
 .create-post-page-container form {
-  background: rgba(11, 23, 40, 0.7);
+  background: rgba(76, 25, 35, 0.78);
   border: 1px solid var(--border);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
   border-radius: 20px;
   padding: 26px;
   box-shadow: var(--shadow);

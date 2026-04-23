@@ -15,10 +15,11 @@ const Navbar = () => {
         <div>
             <nav className='navbar'>
 
-                <Link to="/">
-                    <div className="logo-wrapper">
-                        <img className="logo" src={logo} alt="" />
+                <Link to="/" className="logo-wrapper">
+                    <div className="logo-badge">
+                        <img src={logo} alt="logo" />
                     </div>
+                    <span className="logo-text">Lugar📍</span>
                 </Link>
                 {/* Desktop links */}
                 <div className='nav-links'>

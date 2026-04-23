@@ -1,9 +1,9 @@
 .create-post-form {
   width: 100%;
-  max-width: 560px;              
+  max-width: 560px;
   margin: 0 auto;
 
-  background: rgba(11, 23, 40, 0.65);
+  background: rgba(76, 25, 35, 0.7);
   border: 1px solid var(--border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -18,20 +18,17 @@
   box-shadow: var(--shadow);
 }
 
-
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-
 .form-group label {
   font-size: 13px;
   color: var(--text-light);
   font-weight: 500;
 }
-
 
 .form-group input,
 .form-group textarea {
@@ -41,7 +38,7 @@
   border-radius: 10px;
   border: 1px solid var(--border);
 
-  background: rgba(17, 29, 48, 0.8);
+  background: rgba(51, 18, 27, 0.85);
   color: var(--text);
 
   font-size: 14px;
@@ -50,26 +47,23 @@
   transition: 0.2s ease;
 }
 
-
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 2px var(--ring);
 }
 
-
 .form-group textarea {
   min-height: 110px;
   resize: vertical;
 }
-
 
 .file-input {
   font-size: 13px;
   padding: 8px;
   border-radius: 10px;
   border: 1px dashed var(--border);
-  background: rgba(17, 29, 48, 0.6);
+  background: rgba(51, 18, 27, 0.65);
   cursor: pointer;
 }
 
@@ -79,15 +73,13 @@
   margin-top: 4px;
 }
 
-
 .form-error {
   font-size: 13px;
-  color: #f87171;
-  background: rgba(248, 113, 113, 0.1);
+  color: #ffd1c7;
+  background: rgba(217, 74, 58, 0.18);
   padding: 8px 10px;
   border-radius: 8px;
 }
-
 
 .submit-btn {
   margin-top: 6px;
@@ -106,18 +98,15 @@
   transition: 0.2s ease;
 }
 
-
 .submit-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(77, 163, 255, 0.25);
+  box-shadow: 0 6px 18px rgba(255, 107, 87, 0.28);
 }
-
 
 .submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
-
 
 .file-upload {
   display: inline-block;
@@ -125,17 +114,15 @@
   cursor: pointer;
 }
 
-
 .file-upload input {
   display: none;
 }
-
 
 .file-btn {
   display: inline-block;
   padding: 10px 14px;
 
-  background: rgba(17, 29, 48, 0.9);
+  background: rgba(51, 18, 27, 0.92);
   border: 1px solid var(--border);
   border-radius: 10px;
 
@@ -146,17 +133,15 @@
   transition: 0.2s ease;
 }
 
-
 .file-btn:hover {
-  background: rgba(77, 163, 255, 0.12);
-  border-color: rgba(124, 196, 255, 0.3);
+  background: rgba(255, 107, 87, 0.12);
+  border-color: rgba(255, 179, 138, 0.3);
 }
 
 .file-btn:active {
   transform: scale(0.97);
 }
 
-/* 📱 Mobile tweak */
 @media (max-width: 768px) {
   .create-post-form {
     max-width: 100%;

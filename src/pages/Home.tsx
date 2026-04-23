@@ -1,13 +1,18 @@
 import React from 'react'
 import PostList from '../components/PostList'
+import './Home.css'
+
 const Home = () => {
   return (
-    <div>
-      <h2>Recent Posts</h2>
-      <div>
-        <PostList/>
+    <section className="home">
+      <div className="home-header">
+        <h2>Recent Posts</h2>
       </div>
-    </div>
+
+      <div className="home-posts">
+        <PostList />
+      </div>
+    </section>
   )
 }
 

@@ -1,0 +1,42 @@
+.home {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  color: var(--text);
+}
+
+.home-header {
+  max-width: 900px;
+  margin: 0 auto 1.8rem;
+  padding: 0;             
+  background: none;       
+  border: none;
+  box-shadow: none;
+}
+
+.home-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.home-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.home-subtext {
+  margin: 0.7rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.home-posts {
+  margin-top: 1.5rem;
+}
