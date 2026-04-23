@@ -10,6 +10,7 @@ export interface Post {
   content: string
   created_at: string
   image_url: string
+  avatar_url?: string
 }
 
 const fetchPosts = async (): Promise<Post[]> => {

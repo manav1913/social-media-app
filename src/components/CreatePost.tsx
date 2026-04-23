@@ -2,10 +2,12 @@ import React, { useState, type ChangeEvent } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { supabase } from '../supabase-client'
 import "./CreatePost.css"
+import { useAuth } from '../context/AuthContext'
 
 interface PostInput {
   title: string
   content: string
+  avatar_url:string | null
 }
 
 const createPost = async (post: PostInput, imageFile: File) => {
@@ -34,6 +36,8 @@ const CreatePost = () => {
   const [content, setContent] = useState<string>("")
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
 
+  const {user} = useAuth()
+
   const { mutate, isPending, error } = useMutation({
     mutationFn: (data: { post: PostInput; imageFile: File }) => {
       return createPost(data.post, data.imageFile)
@@ -48,7 +52,7 @@ const CreatePost = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!selectedFile) return
-    mutate({ post: { title, content }, imageFile: selectedFile })
+    mutate({ post: { title, content, avatar_url:user?.user_metadata.avatar_url || null }, imageFile: selectedFile })
   }
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {

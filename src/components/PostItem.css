@@ -1,5 +1,6 @@
 .post-card {
   display: block;
+   position: relative;
   width: 100%;
   max-width: 220px;
   background: var(--surface);
@@ -12,6 +13,21 @@
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
   transition: all 0.25s ease;
+}
+
+.post-avatar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  object-fit: cover;
+  border: 2px solid var(--surface);
+
+  z-index: 2;
 }
 
 .post-card:hover {

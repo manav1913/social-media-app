@@ -31,6 +31,12 @@
   margin-bottom: 0.8rem;
 }
 
+.post-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.75rem 0 0.5rem;
+}
+
 .post-image-wrapper {
   width: 100%;
   border-radius: 10px;
