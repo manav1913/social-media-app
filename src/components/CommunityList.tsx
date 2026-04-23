@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
 import React from 'react'
 import { supabase } from '../supabase-client'
-import './CommunityList.css'
 import { Link } from 'react-router'
+import './CommunityList.css'
 
 export interface Community {
   id: number
@@ -11,11 +11,14 @@ export interface Community {
   created_at: string
 }
 
-const fetchCommunities = async (): Promise<Community[]> => {
+export const fetchCommunities = async (): Promise<Community[]> => {
   const { data, error } = await supabase
     .from('communities')
     .select('*')
     .order('created_at', { ascending: false })
+
+  console.log('communities from supabase:', data)
+  console.log('communities error:', error)
 
   if (error) throw new Error(error.message)
   return data as Community[]
@@ -25,7 +28,12 @@ const CommunityList = () => {
   const { data, error, isLoading } = useQuery<Community[], Error>({
     queryKey: ['communities'],
     queryFn: fetchCommunities,
+    refetchOnMount: 'always',
+    staleTime: 0,
   })
+
+  console.log('community query data:', data)
+  console.log('community query error:', error)
 
   if (isLoading) return <p className="community-status">Loading...</p>
 
