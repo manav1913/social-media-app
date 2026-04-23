@@ -30,4 +30,4 @@ This project was built as a full-stack learning project focusing on real-world a
 
 ## Author
 
-https://github.com/your-username
+https://github.com/manav1913
