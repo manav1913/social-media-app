@@ -5,6 +5,7 @@ import { supabase } from '../supabase-client'
 import type { Post } from './PostList'
 import './PostDetail.css'
 import LikeButton from './LikeButton'
+import CommentSection from './CommentSection'
 
 const fetchPostById = async (id: number): Promise<Post> => {
   const { data, error } = await supabase
@@ -58,7 +59,10 @@ const PostDetail = () => {
             <LikeButton postId={postId} />
           </div>
 
+          
+
           <p className="post-content">{data?.content}</p>
+          <CommentSection postId={postId}/>
 
         </div>
       </div>
