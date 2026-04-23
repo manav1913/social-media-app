@@ -1,0 +1,116 @@
+.community-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 300px;
+  gap: 1.5rem;
+}
+
+.community-left,
+.community-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.community-center {
+  min-width: 0;
+}
+
+.community-header {
+  border-radius: 24px;
+  padding: 1.8rem 1.4rem;
+  margin-bottom: 1.5rem;
+  background:
+    linear-gradient(135deg, rgba(255, 107, 87, 0.14), transparent),
+    var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  box-shadow: var(--shadow);
+}
+
+.community-header h2 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(26px, 4vw, 38px);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.community-header p {
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.community-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.1rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
+
+.sidebar-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.sidebar-card p,
+.sidebar-card li,
+.sidebar-card span,
+.sidebar-card a {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.sidebar-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-card li + li {
+  margin-top: 0.45rem;
+}
+
+.sidebar-btn {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: var(--gradient-main);
+  color: white !important;
+  font-weight: 600;
+  text-align: center;
+}
+
+.community-created {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1100px) {
+  .community-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .community-left,
+  .community-right {
+    order: 2;
+  }
+
+  .community-center {
+    order: 1;
+  }
+}
