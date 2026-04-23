@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import { useQuery } from '@tanstack/react-query'
 import { supabase } from '../supabase-client'
 import type { Post } from './PostList'
-import "./PostDetail.css"
+import './PostDetail.css'
 import LikeButton from './LikeButton'
 
 const fetchPostById = async (id: number): Promise<Post> => {
@@ -21,6 +21,10 @@ const PostDetail = () => {
   const { id } = useParams()
   const postId = Number(id)
 
+  if (!postId) {
+    return <div>Invalid post</div>
+  }
+
   const { data, error, isLoading } = useQuery<Post, Error>({
     queryKey: ['post', postId],
     queryFn: () => fetchPostById(postId),
@@ -28,7 +32,6 @@ const PostDetail = () => {
   })
 
   if (isLoading) return <div>Loading post...</div>
-
   if (error) return <div>Error: {error.message}</div>
 
   return (
